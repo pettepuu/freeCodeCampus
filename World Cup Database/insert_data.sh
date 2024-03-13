@@ -25,7 +25,7 @@ if [[ -z $WTEAM_ID ]]
     INSERT_WINNERTEAM=$($PSQL "INSERT INTO teams(name) VALUES('$WINNER')")
       if [[ $INSERT_WINNERTEAM == "INSERT 0 1" ]]
       then
-        echo Inserted into teams, $INSERT_WINNERTEAM
+        echo "Inserted into teams, $INSERT_WINNERTEAM"
       fi
     fi
 
@@ -35,7 +35,7 @@ if [[ -z $LTEAM_ID ]]
     INSERT_LOSTTEAM=$($PSQL "INSERT INTO teams(name) VALUES('$OPPONENT')")
       if [[ $INSERT_LOSTTEAM == "INSERT 0 1" ]]
       then
-        echo Inserted into teams, $INSERT_LOSTTEAM
+        echo "Inserted into teams, $INSERT_LOSTTEAM"
       fi
     fi
 fi
@@ -54,7 +54,7 @@ do
 
         if [[ $INSERT_RESULT == "INSERT 0 1" ]]
         then
-            echo Inserted into games
+            echo "Inserted into games"
         fi
     fi
 done
